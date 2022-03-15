@@ -54,7 +54,8 @@ static const char gim_copyright[] =
 
 /* TBD: Tonga Device ID */
 static const struct pci_device_id gim_pci_tbl[] = {
-	{ PCI_VDEVICE(ATI, 0x6929), 0 },    /* Tonga S7150 'Cloudy Quark' */
+	/*{ PCI_VDEVICE(ATI, 0x6929), 0 },	/* Tonga S7150 'Cloudy Quark' */
+	{ PCI_VDEVICE(ATI, 0x6860), 0 },	/* Vega10 MI25 */
 	/* required last entry */
 	{0, }
 };
@@ -94,7 +95,7 @@ static int gim_probe(struct pci_dev *pdev,
 
 static void gim_remove(struct pci_dev *pdev)
 {
-	gim_info("AMD GIM remvoe\n");
+	gim_info("AMD GIM remove\n");
 }
 
 static void gim_shutdown(struct pci_dev *pdev)
